@@ -1,5 +1,5 @@
 name: PowrCore
 version: 1.0
-main: Powr/FaizDev/core
+main: PowrCore/FaizDev/PowrCore
 author: FaizDev
 api: 4.0.0
