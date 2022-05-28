@@ -5,7 +5,4 @@ branches:
 projects:
   PowrCore:
     path: ""
-    libs:
-      - src: CortexPE\Commando\BaseCommand
-        version: ^0.3
 ...
