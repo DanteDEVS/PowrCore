@@ -44,8 +44,7 @@ use PowrCore\FaizDev\Form\SimpleForm;
 //Task
 use PowrCore\FaizDev\Task\AlwaysDay;
 
-class PowrCore extends PluginBase implements Listener
-{
+class PowrCore extends PluginBase implements Listener {
   
   public function onEnable(): void{
       $this->getLogger()->info("§aEnabled PowrCore");
