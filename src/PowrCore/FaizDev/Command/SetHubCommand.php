@@ -2,12 +2,11 @@
 
 namespace PowrCore\FaizDev\Command;
 
-use CortexPE\Commando\BaseCommand;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 
-class SetHubCommand extends BaseCommand implements PluginOwned {
+class SetHubCommand extends Command implements PluginOwned {
 
     protected function prepare() : void
     {
