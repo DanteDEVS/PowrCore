@@ -8,7 +8,6 @@ use PowrCore\FaizDev\Command\FlyCommand;
 use PowrCore\FaizDev\Command\NameColorCommand;
 use PowrCore\FaizDev\Command\GamesCommand;
 use PowrCore\FaizDev\Command\SocialMenuCommand;
-use PowrCore\FaizDev\Command\setHubCommand;
 use PowrCore\FaizDev\Command\HubCommand;
 
 // POCKETMINE
@@ -58,7 +57,6 @@ class PowrCore extends PluginBase implements Listener {
       $this->getServer()->getCommandMap()->register("namecolor", new NameColorCommand($this));
       $this->getServer()->getCommandMap()->register("games", new GamesCommand($this));
       $this->getServer()->getCommandMap()->register("socialmenu", new SocialMenuCommand($this));
-      $this->getServer()->getCommandMap()->register("sethub",new SetHubCommand($this));
       $this->getServer()->getCommandMap()->register("hub", new HubCommand($this));
   }
   
