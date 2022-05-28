@@ -1,6 +1,6 @@
 <?php
 
-namespace PowrCore\FaizDev\LDCommand;
+namespace PowrCore\FaizDev\Command;
 
 use pocketmine\Server;
 use pocketmine\player\Player;
