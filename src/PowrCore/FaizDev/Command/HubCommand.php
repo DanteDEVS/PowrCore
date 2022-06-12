@@ -28,6 +28,7 @@ class HubCommand extends Command implements PluginOwned {
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): void {
         if ($sender instanceof Player) {
+            $player = $event->getPlayer();
             $sender->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
             $sender->getInventory()->clearAll();
             $sender->getArmorInventory()->clearAll();
@@ -35,7 +36,7 @@ class HubCommand extends Command implements PluginOwned {
             $sender->getEffects()->clear();
             $sender->setHealth(20);
             $sender->getHungerManager()->setFood(20);
-            $sender->getGamemode(GameMode::ADVENTURE());
+            $sender->$player->getGamemode(GameMode::ADVENTURE());
             $sender->$this->onJoin($player);
             } else {
                 $sender->sendMessage("Use this command in-game");
