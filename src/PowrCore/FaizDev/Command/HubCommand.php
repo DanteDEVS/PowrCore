@@ -12,8 +12,6 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
 use pocketmine\plugin\PluginOwned;
-use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerQuitEvent;
 
 use PowrCore\FaizDev\PowrCore;
 
@@ -32,14 +30,14 @@ class HubCommand extends Command implements PluginOwned {
         if ($sender instanceof Player) {
             $player = $event->getPlayer();
             $sender->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
-            $player->getInventory()->clearAll();
-            $player->getArmorInventory()->clearAll();
-            $player->getCraftingGrid()->clearAll();
-            $player->getEffects()->clear();
-            $player->setHealth(20);
-            $player->getHungerManager()->setFood(20);
-            $player->getGamemode(GameMode::ADVENTURE());
-            $this->onJoin($player);
+            $sender->getInventory()->clearAll();
+            $sender->getArmorInventory()->clearAll();
+            $sender->getCraftingGrid()->clearAll();
+            $sender->getEffects()->clear();
+            $sender->setHealth(20);
+            $sender->getHungerManager()->setFood(20);
+            $sender->getGamemode(GameMode::ADVENTURE());
+            $sender->$this->onJoin($player);
             } else {
                 $sender->sendMessage("Use this command in-game");
             }
