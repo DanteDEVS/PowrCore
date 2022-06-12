@@ -12,6 +12,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
 use pocketmine\plugin\PluginOwned;
+use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerQuitEvent;
 
 use PowrCore\FaizDev\PowrCore;
