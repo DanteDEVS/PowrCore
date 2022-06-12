@@ -9,6 +9,7 @@ use PowrCore\FaizDev\Command\NameColorCommand;
 use PowrCore\FaizDev\Command\GamesCommand;
 use PowrCore\FaizDev\Command\SocialMenuCommand;
 use PowrCore\FaizDev\Command\HubCommand;
+use PowrCore\FaizDev\Events\PlayerQuitEvents;
 
 // POCKETMINE
 use pocketmine\plugin\PluginBase;
@@ -52,6 +53,7 @@ class PowrCore extends PluginBase implements Listener {
       $this->getScheduler()->scheduleRepeatingTask(new AlwaysDay(), 40);
       @mkdir($this->getDataFolder());
       $this->saveDefaultConfig();
+      $this->getServer()->getPluginManager()->registerEvents(new PlayerQuitEvents(), $this);
       $this->getServer()->getCommandMap()->register("settings", new SettingsCommand($this));
       $this->getServer()->getCommandMap()->register("fly", new FlyCommand($this));
       $this->getServer()->getCommandMap()->register("namecolor", new NameColorCommand($this));
