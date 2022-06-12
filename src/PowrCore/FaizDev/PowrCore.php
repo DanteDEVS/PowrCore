@@ -80,10 +80,10 @@ class PowrCore extends PluginBase implements Listener {
                    $player->sendMessage("§aYou Have Left the Settings to Nick!");
                 break;
 			    
-		        case 2:
+		case 2:
 	               $this->getServer()->getCommandMap()->dispatch($player, "size");
                    $player->sendMessage("§aYou Have Left the Settings to Size!");
-	            break;
+	        break;
 
                 case 3:
                    $this->NameColorForm($player);
@@ -175,14 +175,14 @@ class PowrCore extends PluginBase implements Listener {
 					         $player->sendMessage("§aYour nickname color has been changed to §dPurple!");
 				      break;
            
-                      case 6:
+                                      case 6:
 					         $player->setDisplayName("§0" . $player->getName() . "§f");
 					         $player->setNameTag("§0" . $player->getName() . "§f");
 					         $player->sendMessage("§aYour nickname color has been changed to §0Black!");
-                      break;
-			      }
-		     return true;
-      });
+                                      break;
+			          }
+		        return true;
+         });
 		  $form->setTitle("§bNameColors");
 		  $form->setContent("§fSelect your color you prefer to your name!");
 		  $form->addButton("White");
@@ -191,7 +191,7 @@ class PowrCore extends PluginBase implements Listener {
 		  $form->addButton("§eYellow");
 		  $form->addButton("§6Orange");
 		  $form->addButton("§dPurple");
-          $form->addButton("§0Black");
+                  $form->addButton("§0Black");
 		  $form->sendToPlayer($player);
 		  return $form;
   }
@@ -210,13 +210,13 @@ class PowrCore extends PluginBase implements Listener {
                     $this->getServer()->getCommandMap()->dispatch($player, $this->getConfig()->get("GameUi-2"));
                 break;
 			    
-		        case 2:
+		case 2:
                     $this->getServer()->getCommandMap()->dispatch($player, $this->getConfig()->get("GameUi-3"));
-	            break;
+	        break;
 			    
-		        case 3:
+		case 3:
 		            $this->getServer()->getCommandMap()->dispatch($player, $this->getConfig()->get("GameUi-4"));
-	            break;
+	        break;
 
                 case 4:
                     $this->getServer()->getCommandMap()->dispatch($player, $this->getConfig()->get("GameUi-5"));
@@ -255,9 +255,9 @@ class PowrCore extends PluginBase implements Listener {
                     $this->getServer()->getCommandMap()->dispatch($player, "friend");
                 break;
 			        
-		        case 2:
+		case 2:
 		            
-	            break;
+	        break;
             }
        });
        $form->setTitle("§dSocial Menu");
